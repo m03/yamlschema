@@ -1,0 +1,9 @@
+codado==0.4.990
+jsonschema==2.6.0
+mock==2.0.0
+pyflakes==1.6.0
+pytest==3.2.3
+pytest-cov==2.5.1
+pytest-flakes==2.0.0
+pyyaml==3.12
+twisted==17.9.0
