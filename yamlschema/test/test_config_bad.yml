@@ -1,0 +1,10 @@
+periodic-import-seconds: sandwich
+browserBlacklist:
+- family=IE version<9
+debug: banana
+domain: 1.1.1.1:8080
+email:
+    test:
+      contact: sandwich@bright.md
+      stalledInterviewsEmail: sandwich@bright.md
+      feedback: sandwich@bright.md

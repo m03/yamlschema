@@ -1,0 +1,20 @@
+type: object
+properties:
+  debug:
+    type: boolean
+  domain:
+    type: string
+    minLength: 4 # a:80 for example
+  email:
+    type: object
+    properties:
+      contact:
+        type: string
+        format: email
+      feedback:
+        type: string
+        format: email
+      stalledInterviewsEmail:
+        type: string
+        format: email
+required: ["debug", "domain", "email"]
