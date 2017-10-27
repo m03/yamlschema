@@ -11,4 +11,4 @@ twine upload dist/*
 
 ## Change Log
 
-- 0.1 initial version
+- 0.1.1 first working version
