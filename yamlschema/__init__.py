@@ -1,8 +1,9 @@
 """
-Validate YAML configuration files
+Validate YAML files
 """
 
 from yamlschema import _version
+from yamlschema.lib import validateYAML
 
 
-(_version,) # for pyflakes
+(_version, validateYAML) # for pyflakes

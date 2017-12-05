@@ -1,5 +1,5 @@
 """
-Tests for YAML config file validation
+Tests for YAML file validation
 """
 
 import sys
@@ -13,13 +13,13 @@ from pytest import fixture, raises
 
 from mock import patch
 
-from yamlschema.lib import ValidateConfig
+from yamlschema.lib import ValidateYAML
 
 
 @fixture
 def options():
-    options = ValidateConfig()
-    options['configSchema'] = fromdir(__file__)('test_config.schema.yml')
+    options = ValidateYAML()
+    options['yamlSchema'] = fromdir(__file__)('test_config.schema.yml')
     return options
 
 
@@ -37,7 +37,7 @@ def test_postOptionsOk(options, configGood):
     """
     Does a good config pass?
     """
-    options['configFile'] = configGood
+    options['yamlFile'] = configGood
     pOut = patch.object(sys, 'stdout', autospec=True)
     pErr = patch.object(sys, 'stderr', autospec=True)
     with pOut, pErr:
@@ -51,7 +51,7 @@ def test_postOptionsBad(options, configBad):
     """
     pOut = patch.object(sys, 'stdout', autospec=True)
     pErr = patch.object(sys, 'stderr', autospec=True)
-    options['configFile'] = configBad
+    options['yamlFile'] = configBad
 
     with pOut, pErr:
         raises(ValidationError, options.postOptions)
@@ -69,6 +69,6 @@ def test_parseArgs(options):
 
     with patch.object(os, 'access', return_value=True):
         options.parseArgs('cheeses', 'meats')
-        assert options['configFile'] == 'cheeses'
-        assert options['configSchema'] == 'meats'
+        assert options['yamlFile'] == 'cheeses'
+        assert options['yamlSchema'] == 'meats'
 

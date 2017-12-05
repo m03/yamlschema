@@ -1,3 +1,3 @@
 """
-Tests for YAML config validation
+Tests for YAML validation
 """
