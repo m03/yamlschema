@@ -1,4 +1,5 @@
 from setuptools import setup
+from inspect import cleandoc
 
 from yamlschema._version import __version__
 
