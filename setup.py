@@ -14,4 +14,7 @@ setup(
   keywords = ['yaml', 'schema'],
   classifiers = [],
   scripts = ['bin/yamlschema'],
+     install_requires=cleandoc('''
+        jsonschema==2.6.0
+        ''').split()
 )
