@@ -14,6 +14,10 @@ twine upload dist/*<version>*
 ```
 
 ## Change Log
+### [0.1.4] - 2017-12-07
+#### Changed
+- Fixed issues in setup.py that were preventing package build
+
 ### [0.1.3] - 2017-12-06
 #### Added
 - Added jsonschema dependency to setup
@@ -24,3 +28,4 @@ twine upload dist/*<version>*
 
 [0.1.2]: https://github.com/Brightmd/yamlschema/tree/0.1.2
 [0.1.3]: https://github.com/Brightmd/yamlschema/compare/0.1.2...0.1.3
+[0.1.4]: https://github.com/Brightmd/yamlschema/compare/0.1.3...0.1.4
