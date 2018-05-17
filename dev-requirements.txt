@@ -1,0 +1,15 @@
+mock==2.0.0
+pip>=9.0.1
+pyflakes==1.6.0
+pytest==3.2.3
+pytest-cov==2.5.1
+pytest-flakes==2.0.0
+pytest-runner==4.2
+pyyaml==3.12
+setuptools=39.1.0
+tox==2.9.1
+twine==1.9.1
+twisted==17.9.0
+wheel==0.30.0
+
+-r requirements.txt

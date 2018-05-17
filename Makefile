@@ -42,10 +42,10 @@ clean_tox:
 	-rm -r .tox_output
 
 sdist:
-	python setup.py sdist
+	tox -- sdist
 
 test:
-	tox
+	tox -- test
 
 wheel: clean_dist sdist
-	python setup.py bdist_wheel
+	tox -- bdist_wheel

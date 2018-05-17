@@ -20,5 +20,15 @@ setup(
   install_requires=cleandoc('''
     codado>=0.4.997,<0.6
     jsonschema==2.6.0
+    ''').split(),
+  setup_requires=cleandoc('''
+    pytest-runner==4.2
+    ''').split(),
+  tests_require=cleandoc('''
+    mock==2.0.0
+    pyflakes==1.6.0
+    pytest==3.2.3
+    pytest-cov==2.5.1
+    pytest-flakes==2.0.0
     ''').split()
 )
